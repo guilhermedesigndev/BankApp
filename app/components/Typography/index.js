@@ -12,8 +12,10 @@ export default function Typography({
   bold,
   medium,
   semiBold,
+  gray,
   h1,
   h2,
+  h3,
   flex1,
   flex2,
   center,
@@ -26,8 +28,10 @@ export default function Typography({
     bold && styles.bold,
     medium && styles.medium,
     semiBold && styles.semiBold,
+    gray && styles.gray,
     h1 && styles.h1,
     h2 && styles.h2,
+    h3 && styles.h3,
     flex1 && styles.flex1,
     flex2 && styles.flex2,
     center && styles.center,
@@ -51,11 +55,17 @@ const styles = StyleSheet.create({
   semiBold: {
     fontFamily: theme.fonts.semiBold,
   },
+  gray: {
+    color: theme.colors.gray,
+  },
   h1: {
     fontSize: theme.sizes.h1,
   },
   h2: {
     fontSize: theme.sizes.h2,
+  },
+  h3: {
+    fontSize: theme.sizes.h3,
   },
   base: {
     fontSize: theme.sizes.base,

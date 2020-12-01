@@ -7,7 +7,7 @@ import Normalize from '~/helpers/escale';
 export const ContainerActions = styled.View`
   justify-content: center;
   align-items: center;
-  margin-top: ${Normalize.verticalScale(50)}px;
+  margin-top: ${Normalize.verticalScale(30)}px;
 `;
 
 export const ListActions = styled.FlatList``;

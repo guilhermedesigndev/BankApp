@@ -13,7 +13,7 @@ export const ContainerCreditCard = styled.View`
   position: relative;
   overflow: hidden;
   width: ${windowWidth - 40}px;
-  height: ${Normalize.verticalScale(200)}px;
+  height: ${Normalize.verticalScale(170)}px;
   background: ${theme.colors.white};
   border-radius: 20px;
   padding: 20px;
@@ -61,5 +61,4 @@ export const ContainerDot = styled.View`
 export const ContainerDotlist = styled.View`
   justify-content: center;
   align-items: center;
-  margin-top: ${Normalize.verticalScale(30)}px;
 `;
