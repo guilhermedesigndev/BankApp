@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   ContainerHistoric,
@@ -15,6 +15,8 @@ import * as theme from '~/styles/theme';
 
 import Typography from '~/components/Typography';
 import Icon from '~/components/Icons';
+
+import ModalDetail from './ModalDetail';
 
 const dataHistoric = [
   {
@@ -41,9 +43,11 @@ const dataHistoric = [
 ];
 
 export default function Historic() {
+  const [showModalDetail, setShowModalDetail] = useState(null);
+
   function renderItemsHistoric({item}) {
     return (
-      <ContainerItemHistoric>
+      <ContainerItemHistoric onPress={() => setShowModalDetail(true)}>
         <ContainerInfoHistoric>
           <ContainerIcon>
             <Icon name={item.icon} color={theme.colors.white} />
@@ -79,6 +83,11 @@ export default function Historic() {
         keyExtractor={(item) => item.id}
         renderItem={renderItemsHistoric}
         ItemSeparatorComponent={() => <SeparatorList />}
+      />
+
+      <ModalDetail
+        visible={showModalDetail}
+        toggle={() => setShowModalDetail(null)}
       />
     </ContainerHistoric>
   );

@@ -24,7 +24,7 @@ export const SeparatorList = styled.View`
   margin: ${Normalize.verticalScale(10)}px 0px;
 `;
 
-export const ContainerItemHistoric = styled.View`
+export const ContainerItemHistoric = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

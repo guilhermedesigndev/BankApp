@@ -13,6 +13,7 @@ export default function Typography({
   medium,
   semiBold,
   gray,
+  white,
   h1,
   h2,
   h3,
@@ -29,6 +30,7 @@ export default function Typography({
     medium && styles.medium,
     semiBold && styles.semiBold,
     gray && styles.gray,
+    white && styles.white,
     h1 && styles.h1,
     h2 && styles.h2,
     h3 && styles.h3,
@@ -57,6 +59,9 @@ const styles = StyleSheet.create({
   },
   gray: {
     color: theme.colors.gray,
+  },
+  white: {
+    color: theme.colors.white,
   },
   h1: {
     fontSize: theme.sizes.h1,
